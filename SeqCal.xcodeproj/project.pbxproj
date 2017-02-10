@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		175FA06E1E4BA30200979761 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175FA06D1E4BA30200979761 /* main.swift */; };
+		175FA0771E4E29D400979761 /* input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175FA0761E4E29D400979761 /* input.swift */; };
+		175FA0791E4E2A6B00979761 /* core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175FA0781E4E2A6B00979761 /* core.swift */; };
+		175FA07B1E4E2AC800979761 /* solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175FA07A1E4E2AC800979761 /* solver.swift */; };
+		175FA07D1E4E2AEC00979761 /* output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175FA07C1E4E2AEC00979761 /* output.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		175FA06A1E4BA30200979761 /* SeqCal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SeqCal; sourceTree = BUILT_PRODUCTS_DIR; };
 		175FA06D1E4BA30200979761 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		175FA0761E4E29D400979761 /* input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = input.swift; sourceTree = "<group>"; };
+		175FA0781E4E2A6B00979761 /* core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = core.swift; sourceTree = "<group>"; };
+		175FA07A1E4E2AC800979761 /* solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = solver.swift; sourceTree = "<group>"; };
+		175FA07C1E4E2AEC00979761 /* output.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = output.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				175FA06D1E4BA30200979761 /* main.swift */,
+				175FA0761E4E29D400979761 /* input.swift */,
+				175FA0781E4E2A6B00979761 /* core.swift */,
+				175FA07A1E4E2AC800979761 /* solver.swift */,
+				175FA07C1E4E2AEC00979761 /* output.swift */,
 			);
 			path = SeqCal;
 			sourceTree = "<group>";
@@ -120,7 +132,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175FA07D1E4E2AEC00979761 /* output.swift in Sources */,
+				175FA0771E4E29D400979761 /* input.swift in Sources */,
 				175FA06E1E4BA30200979761 /* main.swift in Sources */,
+				175FA07B1E4E2AC800979761 /* solver.swift in Sources */,
+				175FA0791E4E2A6B00979761 /* core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
