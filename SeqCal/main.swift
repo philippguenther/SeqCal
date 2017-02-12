@@ -9,5 +9,5 @@
 import Foundation
 
 
-print(text(s: proof(s: Sequent.theorem(parse(text: "X and Y => X or Y")))))
+print(proof(Sequent.theorem(parse(from: "(X and Y) => X or Y"))))
 

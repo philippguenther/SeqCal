@@ -9,7 +9,7 @@
 import Foundation
 
 
-fileprivate func derive(t: Theorem) -> Sequent {
+fileprivate func derive(_ t: Theorem) -> Sequent {
     // not =>
     if let theta = t.assumptions.filter({a in if case .not(_) = a {return true} else {return false}}).first,
             case .not(let phi) = theta {
@@ -82,7 +82,7 @@ fileprivate func derive(t: Theorem) -> Sequent {
         ], rule: ._or)
     }
         
-    // impl =>
+    // -> =>
     else if let theta = t.assumptions.filter({a in if case .impl(_, _) = a {return true} else {return false}}).first,
             case .impl(let phi, let psi) = theta {
         return Sequent.sequent(theorem: t, premises: [
@@ -96,7 +96,7 @@ fileprivate func derive(t: Theorem) -> Sequent {
         ], rule: .impl_)
     }
         
-    // => impl
+    // => ->
     else if let theta = t.conclusions.filter({a in if case .impl(_, _) = a {return true} else {return false}}).first,
             case .impl(let phi, let psi) = theta {
         return Sequent.sequent(theorem: t, premises: [
@@ -112,13 +112,13 @@ fileprivate func derive(t: Theorem) -> Sequent {
     }
 }
 
-func proof(s: Sequent) -> Sequent {
+public func proof(_ s: Sequent) -> Sequent {
     switch (s) {
     case .axiom(_):
         return s
     case .theorem(let t):
-        return proof(s: derive(t: t))
+        return proof(derive(t))
     case .sequent(let t, let premises, let rule):
-        return Sequent.sequent(theorem: t, premises: premises.map({p in proof(s: p)}), rule: rule)
+        return Sequent.sequent(theorem: t, premises: premises.map({p in proof(p)}), rule: rule)
     }
 }
